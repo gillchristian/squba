@@ -1,0 +1,54 @@
+{
+  "name": "squba",
+  "version": "0.1.0",
+  "description": "safely access nested properties",
+  "main": "dist/squba.js",
+  "scripts": {
+    "test": "npm run lint && ava -v 'tests/**/*.test.js'",
+    "ava:watch": "ava -v -w 'tests/**/*.test.js'",
+    "lint": "xo index.js 'tests/**/*.js'",
+    "prepublish": "npm run build",
+    "build": "babel index.js -o dist/squba.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gillchristian/squba.git"
+  },
+  "keywords": [
+    "getter",
+    "nested",
+    "properties",
+    "safe",
+    "object",
+    "array"
+  ],
+  "author": "gillchristian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gillchristian/squba/issues"
+  },
+  "homepage": "https://github.com/gillchristian/squba#readme",
+  "engines": {
+    "node": ">=5"
+  },
+  "xo": {
+    "esnext": true,
+    "space": true,
+    "semicolon": false
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-require": "^1.0.1",
+    "deep-freeze-strict": "^1.1.1",
+    "xo": "^0.16.0"
+  }
+}
