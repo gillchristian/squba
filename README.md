@@ -44,4 +44,4 @@ squba(foo, 'bar.baz') // undefined
 
 ### FAQ
 
-- *Why such small module?*: [Sindre](https://github.com/sindresorhus/) gives a [good answer](https://github.com/sindresorhus/ama/issues/10#issuecomment-117766328) to this.
+- *Why such small module?* [Sindre](https://github.com/sindresorhus/) gives a [good answer](https://github.com/sindresorhus/ama/issues/10#issuecomment-117766328) to this.
