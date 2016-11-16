@@ -1,6 +1,6 @@
 {
   "name": "squba",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "safely access nested properties",
   "main": "dist/squba.js",
   "scripts": {
