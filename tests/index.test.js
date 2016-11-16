@@ -25,6 +25,9 @@ test('access a nested property by passing the path as array', t => {
 
   actual = squba(foo, ['bar', 'objs', 0, 'address', 'street'])
   t.is(actual, 'Lemontree st.')
+
+  actual = squba(foo, ['bar'])
+  t.deepEqual(actual, foo.bar)
 })
 
 test('access a nested property by passing the path as string', t => {
@@ -36,6 +39,9 @@ test('access a nested property by passing the path as string', t => {
 
   actual = squba(foo, 'bar.objs.0.address.street')
   t.is(actual, 'Lemontree st.')
+
+  actual = squba(foo, 'bar')
+  t.deepEqual(actual, foo.bar)
 })
 
 test('return undefined when the property is somehow not accessible', t => {
