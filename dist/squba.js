@@ -10,7 +10,10 @@ function isString(val) {
   return typeof val === 'string';
 }
 
-function squba(obj, path) {
+function squba() {
+  var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var path = arguments[1];
+
   if (isString(path)) {
     return squba(obj, path.split('.'));
   }

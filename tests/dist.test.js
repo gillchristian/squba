@@ -45,3 +45,11 @@ test('return undefined when the property is somehow not accessible', t => {
   actual = squba(foo, ['bar', 'baz'])
   t.is(actual, undefined)
 })
+
+test('returns undefined when the object is undefined', t => {
+  let actual = squba(undefined, 'bar')
+  t.is(actual, undefined)
+
+  actual = squba(undefined, ['bar'])
+  t.is(actual, undefined)
+})

@@ -6,7 +6,7 @@ function isString(val) {
   return typeof val === 'string'
 }
 
-function squba(obj, path) {
+function squba(obj = {}, path) {
   if (isString(path)) {
     return squba(obj, path.split('.'))
   }
